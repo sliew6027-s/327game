@@ -1,0 +1,352 @@
+html, body {
+  margin: 0;
+  font-family: "Space Grotesk", Arial, sans-serif;
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* wrapper/menu pattern (your style) */
+#wrapper {
+  width: 900px;
+  margin: 0 auto;
+  padding: 28px 18px 50px 18px;
+}
+
+#menu {
+  display: flex;
+  gap: 18px;
+  padding: 12px 0;
+}
+
+#menu a {
+  text-decoration: none;
+  font-weight: 700;
+  padding: 10px 12px;
+  border-radius: 12px;
+}
+
+#menu a, .choices a {
+  transition: transform 0.15s ease, background-color 0.15s ease, opacity 0.15s ease;
+}
+
+#menu a:hover, .choices a:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+#status {
+  margin: 10px 0 22px 0;
+  padding: 10px 12px;
+  border-radius: 12px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+h1 {
+  margin: 12px 0 6px 0;
+  font-size: 52px;
+  letter-spacing: 1px;
+}
+
+h2 {
+  margin: 0 0 16px 0;
+  font-size: 22px;
+  font-weight: 700;
+  opacity: 0.95;
+}
+
+.storyBlock {
+  padding: 18px;
+  border-radius: 16px;
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+.storyBlock p {
+  margin: 0 0 12px 0;
+}
+
+.storyBlock p:last-child {
+  margin-bottom: 0;
+}
+
+/* choices */
+.choices {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.choices a {
+  display: inline-block;
+  padding: 12px 14px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.choices a:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+/* HOME */
+body#home {
+  background: linear-gradient(135deg, #0b1b22, #3b8b6b);
+  color: white;
+}
+
+body#home #status,
+body#home .storyBlock {
+  background: rgba(255,255,255,0.12);
+}
+
+body#home #menu a,
+body#home .choices a {
+  color: white;
+  background: rgba(255,255,255,0.12);
+}
+
+/* START */
+body#start {
+  background: linear-gradient(135deg, #11162a, #3b2d74);
+  color: white;
+}
+
+body#start #status,
+body#start .storyBlock {
+  background: rgba(0,0,0,0.30);
+}
+
+body#start #menu a,
+body#start .choices a {
+  color: white;
+  background: rgba(255,255,255,0.12);
+}
+
+/* DESK */
+body#desk {
+  background: linear-gradient(135deg, #161a2b, #5a2a2a);
+  color: white;
+}
+
+body#desk #status,
+body#desk .storyBlock {
+  background: rgba(0,0,0,0.30);
+}
+
+body#desk #menu a,
+body#desk .choices a {
+  color: white;
+  background: rgba(255,255,255,0.12);
+}
+
+/* PLAN */
+body#plan {
+  background: linear-gradient(135deg, #12202a, #2a5a52);
+  color: white;
+}
+
+body#plan #status,
+body#plan .storyBlock {
+  background: rgba(0,0,0,0.30);
+}
+
+body#plan #menu a,
+body#plan .choices a {
+  color: white;
+  background: rgba(255,255,255,0.12);
+}
+
+/* LEAVE */
+body#leave {
+  background: linear-gradient(135deg, #1b1630, #4c2b6a);
+  color: white;
+}
+
+body#leave #status,
+body#leave .storyBlock {
+  background: rgba(0,0,0,0.30);
+}
+
+body#leave #menu a,
+body#leave .choices a {
+  color: white;
+  background: rgba(255,255,255,0.12);
+}
+
+/* LIBRARY */
+body#library {
+  background: linear-gradient(135deg, #0b1b22, #244b6b);
+  color: white;
+}
+
+/* STUDENTCENTER */
+body#studentcenter {
+  background: linear-gradient(135deg, #24110b, #6b2f24);
+  color: white;
+}
+
+/* QUIETSPOT */
+body#quietspot {
+  background: linear-gradient(135deg, #0b241a, #245a41);
+  color: white;
+}
+
+body#library #status, body#library .storyBlock,
+body#studentcenter #status, body#studentcenter .storyBlock,
+body#quietspot #status, body#quietspot .storyBlock {
+  background: rgba(0,0,0,0.30);
+}
+
+body#library #menu a, body#library .choices a,
+body#studentcenter #menu a, body#studentcenter .choices a,
+body#quietspot #menu a, body#quietspot .choices a {
+  color: white;
+  background: rgba(255,255,255,0.12);
+}
+
+/* PRINTER */
+body#printer {
+  background: linear-gradient(135deg, #1a1a24, #5a3a2a);
+  color: white;
+}
+
+/* FORGOTID */
+body#forgotid {
+  background: linear-gradient(135deg, #250b0b, #6b2424);
+  color: white;
+}
+
+/* GOOD ENDING */
+body#goodending {
+  background: linear-gradient(135deg, #0b241a, #245a41);
+  color: white;
+}
+
+/* BARELY ENDING */
+body#barelyending {
+  background: linear-gradient(135deg, #24170b, #6b4b24);
+  color: white;
+}
+
+body#printer #status, body#printer .storyBlock,
+body#forgotid #status, body#forgotid .storyBlock,
+body#goodending #status, body#goodending .storyBlock,
+body#barelyending #status, body#barelyending .storyBlock {
+  background: rgba(0,0,0,0.30);
+}
+
+body#printer #menu a, body#printer .choices a,
+body#forgotid #menu a, body#forgotid .choices a,
+body#goodending #menu a, body#goodending .choices a,
+body#barelyending #menu a, body#barelyending .choices a {
+  color: white;
+  background: rgba(255,255,255,0.12);
+}
+
+/* ID FOUND */
+body#idfound {
+  background: linear-gradient(135deg, #0b241a, #245a41);
+  color: white;
+}
+
+/* REPLACE ID */
+body#idreplace {
+  background: linear-gradient(135deg, #0b1b22, #244b6b);
+  color: white;
+}
+
+body#idfound #status, body#idfound .storyBlock,
+body#idreplace #status, body#idreplace .storyBlock {
+  background: rgba(0,0,0,0.30);
+}
+
+body#idfound #menu a, body#idfound .choices a,
+body#idreplace #menu a, body#idreplace .choices a {
+  color: white;
+  background: rgba(255,255,255,0.12);
+}
+
+/* BAD ENDING */
+body#badending {
+  background: linear-gradient(135deg, #240b14, #4a0b0b);
+  color: white;
+}
+
+/* LOW BATTERY */
+body#lowbattery {
+  background: linear-gradient(135deg, #0b0f24, #2a2a5a);
+  color: white;
+}
+
+/* ALTERNATE ENDING */
+body#alternate {
+  background: linear-gradient(135deg, #0b241f, #24406b);
+  color: white;
+}
+
+/* REGULAR ENDING */
+body#regularending {
+  background: linear-gradient(135deg, #0b1b22, #2b2f6e);
+  color: white;
+}
+
+body#badending #status, body#badending .storyBlock,
+body#lowbattery #status, body#lowbattery .storyBlock,
+body#alternate #status, body#alternate .storyBlock,
+body#regularending #status, body#regularending .storyBlock {
+  background: rgba(0,0,0,0.30);
+}
+
+body#badending #menu a, body#badending .choices a,
+body#lowbattery #menu a, body#lowbattery .choices a,
+body#alternate #menu a, body#alternate .choices a,
+body#regularending #menu a, body#regularending .choices a {
+  color: white;
+  background: rgba(255,255,255,0.12);
+}
+
+
+/* RESET */
+body#reset {
+  background: linear-gradient(135deg, #1b1b1b, #3a3a3a);
+  color: white;
+}
+
+body#reset #status,
+body#reset .storyBlock {
+  background: rgba(255,255,255,0.10);
+}
+
+body#reset #menu a,
+body#reset .choices a {
+  color: white;
+  background: rgba(255,255,255,0.12);
+}
+
+
+body#lateending {
+  background: linear-gradient(135deg, #0b0b0f, #4a2b0b);
+  color: white;
+}
+
+/* LATE ENDING */
+body#lateending #status,
+body#lateending .storyBlock {
+  background: rgba(0,0,0,0.30);
+}
+
+body#lateending #menu a,
+body#lateending .choices a {
+  color: white;
+  background: rgba(255,255,255,0.12);
+}
+
+

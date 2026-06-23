@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>The Lateness Quest - Bad Ending</title>
+
+      <link rel="stylesheet" href="https://fonts.googleapis.com">
+      <link rel="stylesheet" href="https://fonts.gstatic.com" crossorigin>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk">
+      <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+
+      <script src="../js/state.js"></script>
+      <script src="../js/page.js"></script>
+  </head>
+
+  <body id="badending">
+    <div id="wrapper">
+
+      <div id="menu">
+        <a href="../index.html">Home</a>
+        <a href="start.html">Start</a>
+        <a href="reset.html" onclick="resetState()">Reset</a>
+      </div>
+
+      <div id="status"></div>
+        <h1>Just not your day</h1>
+        <h2>Today wins this round.</h2>
+
+      <div class="storyBlock">
+        <p id="badMsg"></p>
+        <p>You promise yourself you’ll do it differently next time—because you know you can.</p>
+      </div>
+
+      <div class="choices">
+        <a href="reset.html" onclick="resetState()">Try Again (Reset)</a>
+        <a href="../index.html">Back to Home</a>
+      </div>
+    </div>
+
+    <script>
+      renderStatusBar();
+      renderBadEndingMessage();
+    </script>
+  </body>
+</html>

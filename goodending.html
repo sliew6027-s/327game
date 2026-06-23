@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>The Late Quest - Good Ending</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+
+    <script src="../js/state.js"></script>
+    <script src="../js/page.js"></script>
+  </head>
+
+  <body id="goodending">
+    <div id="wrapper">
+
+      <div id="menu">
+        <a href="../index.html">Home</a>
+        <a href="start.html">Start</a>
+        <a href="reset.html" onclick="resetState()">Reset</a>
+      </div>
+
+      <div id="status"></div>
+        <h1>Good news! You Made It</h1>
+        <h2>Not perfect. Not effortless. But real.</h2>
+
+      <div class="storyBlock">
+        <p id="goodMsg"></p>
+        <p>The room settles around you. Whatever happens next, you’re here for it.</p>
+      </div>
+
+      <div class="choices"> 
+        <a href="reset.html" onclick="resetState()">Play Again (Reset)</a>
+        <a href="../index.html">Back to Home</a>
+      </div>
+    </div>
+
+    <script>
+      renderStatusBar();
+      renderGoodEndingMessage();
+    </script>
+  </body>
+</html>

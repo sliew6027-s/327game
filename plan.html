@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>The Lateness Quest - Plan</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk">
+
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+
+    <script src="../js/state.js"></script>
+    <script src="../js/page.js"></script>
+  </head>
+
+  <body id="plan">
+    <div id="wrapper">
+      <div id="menu">
+        <a href="../index.html">Home</a>
+        <a href="start.html">Start</a>
+        <a href="reset.html" onclick="resetState()">Reset</a>
+      </div>
+
+      <div id="status"></div>
+      <h1>Pause and Plan</h1>
+      <h2>A breath. A decision. A tiny bit of control.</h2>
+
+      <div class="storyBlock">
+        <p>You stop for a second and try to think clearly. If you pick one simple plan and follow it, you might actually make it.</p>
+        <p id="planMsg"></p>
+
+      </div>
+
+      <div class="choices">
+        <a href="desk.html" onclick="(function(){var s=getState(); s.stress=clampStress(s.stress-1); setState(s);}())">Go back and search your desk (stress -1)</a>
+        <a href="leave.html" onclick="(function(){var s=getState(); s.stress=clampStress(s.stress-2); setState(s);}())">Make a quick checklist and go (stress -2)</a>
+
+        <a href="leave.html" onclick="(function(){var s=getState(); s.stress=clampStress(s.stress+1); setState(s);}())">Overthink it and rush anyway (stress +1)</a>
+      </div>
+
+    </div>
+
+  </div>
+    <script>
+      renderStatusBar();
+    renderPlanMessage();
+    </script>
+
+</body>
+</html>

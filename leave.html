@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>The Lateness Quest - Leave</title>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+
+
+    <script src="../js/state.js"></script>
+    <script src="../js/page.js"></script>
+  </head>
+
+  <body id="leave">
+    <div id="wrapper">
+
+      <div id="menu">
+        <a href="../index.html">Home</a>
+        <a href="start.html">Start</a>
+        <a href="reset.html" onclick="resetState()">Reset</a>
+      </div>
+
+      <div id="status"></div>
+
+      <h1>Out the Door</h1>
+      <h2>The hallway feels longer when you’re late.</h2>
+
+      <div class="storyBlock">
+        <p>You step outside and immediately start doing mental math with time you don’t have. You can head somewhere to fix what you’re missing… or gamble that you’ll be fine.</p>
+        <p id="leaveMsg"></p>
+      </div>
+
+      <div class="choices">
+        <a href="library.html">Go to the library</a>
+        <a href="studentcenter.html">Go to the student center</a>
+        <a href="quietspot.html">Find a quiet spot to regroup</a>
+
+        <a href="alternate.html" onclick="(function(){var s=getState(); s.stress=clampStress(s.stress-1); setState(s);}())">Take an alternate route (stress -1)</a>
+
+        <a href="barelyending.html" onclick="(function(){var s=getState(); s.stress=clampStress(s.stress+1); setState(s);}())"> Just sprint to class (risk it)</a>
+
+        <a href="lateending.html" onclick="(function(){var s=getState(); s.stress=clampStress(s.stress+2); setState(s);}())">Stop to check directions… and lose time (Late) (stress +2)</a>
+      </div>
+    </div>
+
+    <script>
+      renderStatusBar();
+    renderLeaveMessage();
+    </script>
+  </body>
+</html>

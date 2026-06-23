@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>The Lateness Quest - Desk</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+
+    <script src="../js/state.js"></script>
+    <script src="../js/page.js"></script>
+
+  </head>
+
+  <body id="desk">
+    <div id="wrapper">
+
+      <div id="menu">
+      <a href="../index.html">Home</a>
+      <a href="start.html">Start</a>
+      <a href="reset.html" onclick="resetState()">Reset</a>
+    </div>
+
+    <div id="status"></div>
+
+    <h1>Your Desk</h1>
+    <h2>Clutter, sticky notes, and a dangerous amount of “later.”</h2>
+
+    <div class="storyBlock">
+      <p>
+        You dig through papers and half-finished assignments. Something here might save you.
+      </p>
+      <p id="deskMsg"></p>
+    </div>
+
+    <div class="choices">
+      <a href="desk.html"
+         onclick="(function(){var s=getState(); s.hasNotes=true; setState(s);}())">
+        Grab your notes (Notes ✓)
+      </a>
+
+      <a href="desk.html"
+         onclick="(function(){var s=getState(); s.hasCharger=true; setState(s);}())">
+        Take your charger (Charger ✓)
+      </a>
+
+      <a href="leave.html"
+         onclick="(function(){var s=getState(); s.stress=clampStress(s.stress+1); setState(s);}())">
+        Enough — leave now (stress +1)
+      </a>
+
+      <a href="plan.html">Pause and plan</a>
+    </div>
+
+  </div>
+    <script> 
+      renderStatusBar();
+      renderDeskMessage();
+    </script>
+
+  </body>
+</html>

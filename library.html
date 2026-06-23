@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>The Lateness Quest - Library</title>
+      <link rel="stylesheet" href="https://fonts.googleapis.com">
+      <link rel="stylesheet" href="https://fonts.gstatic.com" crossorigin>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk">
+      <link rel="stylesheet" type="text/css" href="../css/styles.css"/>
+
+      <script src="../js/state.js"></script>
+      <script src="../js/page.js"></script>
+  </head>
+
+  <body id="library">
+    <div id="wrapper">
+
+      <div id="menu">
+        <a href="../index.html">Home</a>
+        <a href="start.html">Start</a>
+        <a href="reset.html" onclick="resetState()">Reset</a>
+      </div>
+
+      <div id="status"></div>
+        <h1>The Library</h1>
+        <h2>Quiet rules. The clock doesn’t care.</h2>
+
+        <div class="storyBlock">
+          <p>You head inside, hoping you can fix whatever you forgot before it becomes a real problem.</p>
+          <p id="libraryMsg"></p>
+        </div>
+
+        <div class="choices">
+          <a href="printer.html" onclick="(function(){var s=getState(); s.stress=clampStress(s.stress+1); setState(s);}())">Use the printer (stress +1)
+          </a>
+
+          <a href="quietspot.html" onclick="(function(){var s=getState(); s.stress=clampStress(s.stress-1); setState(s);}())">Find a quieter corner (stress -1)
+          </a>
+
+          <a href="goodending.html" onclick="(function(){var s=getState(); s.stress=clampStress(s.stress-1); setState(s);}())">Head to class now
+          </a>
+        </div>
+      </div>
+
+      <script>
+        renderStatusBar();
+        renderLibraryMessage();
+      </script>
+  </body>
+</html>

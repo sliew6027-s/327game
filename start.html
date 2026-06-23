@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>The Lateness Quest - Start</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+
+    <script src="../js/state.js"></script>
+    <script src="../js/page.js"></script>
+
+  </head>
+
+  <body id="start">
+    <div id="wrapper">
+      <div id="menu">
+        <a href="../index.html">Home</a>
+        <a href="start.html">Start</a>
+        <a href="reset.html" onclick="resetState()">Reset</a>
+      </div>
+
+      <div id="status"></div>
+      <h1>It’s happening.</h1>
+      <h2>You check the time and your stomach drops.</h2>
+
+      <div class="storyBlock">
+        <p>You’re running behind and heading to class, but you might be missing something important. In this story, you’ll make quick choices that change what happens next.
+        </p>
+
+        <p>As you click through the pages, your decisions update your <strong>Status Bar</strong> at the top (stress level and items you have). Some choices lower stress and help you prepare, while othersmake the situation harder.
+        </p>
+
+        <p>Your goal is simple: print out your homework, get to class with what you need, and try to avoid the worst ending. There are multiple paths and endings, so you can reset and replay to see different outcomes.
+        </p>
+
+        <p>You have a few seconds to decide what to do next.</p>
+
+      </div>
+      <div class="choices">
+        <a href="desk.html" onclick="(function(){var s=getState(); s.stress=clampStress(s.stress+1); setState(s);}())"> Search your desk (stress +1)</a>
+
+        <a href="plan.html" onclick="(function(){var s=getState(); s.stress=clampStress(s.stress-1); setState(s);}())"> Pause and plan (stress -1)</a>
+
+        <a href="leave.html" onclick="(function(){var s=getState(); s.stress=clampStress(s.stress+2); setState(s);}())"> Leave anyway (stress +2)</a>
+      </div>
+    </div>
+      <script>renderStatusBar();</script>
+  </body>
+</html>

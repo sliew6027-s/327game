@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>The Lateness Quest - Student Center</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css"/>
+
+    <script src="../js/state.js"></script>
+    <script src="../js/page.js"></script>
+
+  </head>
+
+  <body id="studentcenter">
+    <div id="wrapper">
+
+      <div id="menu">
+        <a href="../index.html">Home</a>
+        <a href="start.html">Start</a>
+        <a href="reset.html" onclick="resetState()">Reset</a>
+      </div>
+
+      <div id="status"></div>
+      <h1>The Student Center</h1>
+      <h2>Everything you need— plus ten distractions.</h2>
+
+      <div class="storyBlock">
+        <p>You push through the doors and immediately get hit with noise, movement, and choices.</p>
+        <p id="studentcenterMsg"></p>
+      </div>
+
+      <div class="choices"> 
+
+        <a href="replaceid.html"
+           onclick="(function(){var s=getState(); s.hasID=true; s.stress=clampStress(s.stress+1); setState(s);}())">
+          Request a replacement ID (ID ✓, stress +1)
+        </a>
+
+        <a href="quietspot.html" onclick="(function(){var s=getState(); s.stress=clampStress(s.stress-1); setState(s);}())">Step out and regroup (stress -1)</a>
+
+        <a href="barelyending.html" onclick="(function(){var s=getState(); s.stress=clampStress(s.stress+1); setState(s);}())"> Give up on fixing it—run to class</a>
+
+      </div>
+    </div>
+
+    <script>
+      renderStatusBar();
+      renderStudentCenterMessage();
+    </script>
+  </body>
+</html>

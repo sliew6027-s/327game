@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>The Lateness Quest - Low Battery</title>
+
+      <link rel="stylesheet" href="https://fonts.googleapis.com">
+      <link rel="stylesheet" href="https://fonts.gstatic.com" crossorigin>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk">
+      <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+
+      <script src="../js/state.js"></script>
+      <script src="../js/page.js"></script>
+  </head>
+
+  <body id="lowbattery">
+    <div id="wrapper">
+
+      <div id="menu">
+        <a href="../index.html">Home</a>
+        <a href="start.html">Start</a>
+        <a href="reset.html" onclick="resetState()">Reset</a>
+      </div>
+
+      <div id="status"></div>
+
+      <h1>Low Battery</h1>
+      <h2>Your screen dims like it’s disappointed in you.</h2>
+
+      <div class="storyBlock">
+        <p>
+          You finally sit down… and your laptop chooses this exact moment to threaten you.
+        </p>
+        <p id="batteryMsg"></p>
+      </div>
+
+      <div class="choices">
+        <a href="regularending.html" onclick="(function(){var s=getState(); s.stress=clampStress(s.stress+1); setState(s);}())">Power through anyway (stress +1)
+        </a>
+
+        <a href="studentcenter.html" onclick="(function(){var s=getState(); s.stress=clampStress(s.stress+1); setState(s);}())">Go find a charging spot (stress +1)
+        </a>
+
+        <a href="badending.html" onclick="(function(){var s=getState(); s.stress=clampStress(s.stress+2); setState(s);}())"> Accept defeat (stress +2)
+        </a>
+      </div>
+
+    </div>
+
+    <script>
+      renderStatusBar();
+      renderLowBatteryMessage();
+    </script>
+  </body>
+</html>

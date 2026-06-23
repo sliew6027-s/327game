@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>The Lateness Quest - Late to Class</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+
+    <script src="../js/state.js"></script>
+    <script src="../js/page.js"></script>
+
+  </head>
+
+  <body id="lateending">
+    <div id="wrapper">
+
+      <div id="menu">
+        <a href="../index.html">Home</a>
+        <a href="start.html">Start</a>
+        <a href="reset.html" onclick="resetState()">Reset</a>
+      </div>
+
+      <div id="status"></div>
+
+      <h1>Too Late</h1>
+      <h2>You made it… but not on time.</h2>
+
+      <div class="storyBlock">
+        <p id="lateMsg"></p>
+      </div>
+
+      <div class="choices">
+        <a href="reset.html" onclick="resetState()">Try Again (Reset)</a>
+        <a href="../index.html">Back to Home</a>
+      </div>
+
+    </div>
+
+    <script>
+      renderStatusBar();
+      renderLateEndingMessage();
+    </script>
+  </body>
+</html>

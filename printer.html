@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>The Lateness Quest - Printer</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css"/>
+
+    <script src="../js/state.js"></script>
+    <script src="../js/page.js"></script>
+  </head>
+
+  <body id="printer">
+    <div id="wrapper">
+
+      <div id="menu">
+        <a href="../index.html">Home</a>
+        <a href="start.html">Start</a>
+        <a href="reset.html" onclick="resetState()">Reset</a>
+      </div>
+
+      <div id="status"></div>
+        <h1>The Printer</h1>
+        <h2>The most unpredictable character in the story.</h2>
+
+      <div class="storyBlock">
+
+        <p id="printerMsg"></p>
+      </div>
+
+      <div class="choices">
+        <a href="#"
+           onclick="printerAttempt(); return false;">
+          Print out homework and go to class
+        </a>
+
+        <a href="barelyending.html"
+           onclick="(function(){var s=getState(); s.stress=clampStress(s.stress+1); setState(s);}())">
+          Give up on printing and run to class (risk it)
+        </a>
+
+        <a href="library.html">Go back to the library</a>
+      </div>
+    </div>
+
+    <script>
+      renderStatusBar();
+      renderPrinterMessage();
+    </script>
+  </body>
+</html>

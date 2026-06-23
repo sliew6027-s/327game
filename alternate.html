@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>The Lateness Quest - Alternate Route</title>
+
+      <link rel="stylesheet" href="https://fonts.googleapis.com">
+      <link rel="stylesheet" href="https://fonts.gstatic.com" crossorigin>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk">
+      <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+
+      <script src="../js/state.js"></script>
+      <script src="../js/page.js"></script>
+  </head>
+
+  <body id="alternate">
+    <div id="wrapper">
+
+      <div id="menu">
+        <a href="../index.html">Home</a>
+        <a href="start.html">Start</a>
+        <a href="reset.html" onclick="resetState()">Reset</a>
+      </div>
+
+      <div id="status"></div>
+        <h1>Alternate Route</h1>
+        <h2>You choose a different path than usual.</h2>
+
+      <div class="storyBlock">
+        <p>Sometimes changing your route changes your luck. Sometimes it just changes the scenery.</p>
+        <p id="altMsg"></p>
+      </div>
+
+      <div class="choices">
+        <a href="library.html" onclick="(function(){var s=getState(); s.stress=clampStress(s.stress-1); setState(s);}())">Head toward the library (stress -1)</a>
+
+        <a href="lowbattery.html" onclick="(function(){var s=getState(); s.stress=clampStress(s.stress+1); setState(s);}())">Keep walking—don’t stop (stress +1)</a>
+
+        <a href="regularending.html">Go straight to class</a>
+      </div>
+    </div>
+
+    <script>
+      renderStatusBar();
+      renderAlternateMessage();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>The Lateness Quest - Reset</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css"/>
+
+    <script src="js/state.js"></script>
+    <script src="js/page.js"></script>
+
+  </head>
+
+  <body id="reset">
+    <div id="wrapper">
+
+    <div id="menu">
+      <a href="../index.html">Home</a>
+      <a href="start.html">Start</a>
+      <a href="reset.html" onclick="resetState()">Reset</a>
+    </div>
+
+    <div id="status"></div>
+
+    <h1>Reset Complete</h1>
+    <h2>The story forgets what you were carrying.</h2>
+
+    <div class="storyBlock">
+      <p>
+        Everything is back to default: stress is reset and your inventory is empty.
+        When you’re ready, jump back in and try a different path.
+      </p>
+    </div>
+
+    <div class="choices">
+      <a href="start.html" onclick="resetState()">Restart Now</a>
+      <a href="../index.html">Return Home</a>
+    </div>
+  </div>
+
+  <script> 
+      resetState();
+      renderStatusBar();
+    </script>
+    
+  </body>
+</html>

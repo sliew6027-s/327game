@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>The Lateness Quest - Barely</title>
+
+      <link rel="stylesheet" href="https://fonts.googleapis.com">
+      <link rel="stylesheet" href="https://fonts.gstatic.com" crossorigin>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk">
+      <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+
+      <script src="../js/state.js"></script>
+      <script src="../js/page.js"></script>
+  </head>
+
+  <body id="barelyending">
+    <div id="wrapper">
+
+      <div id="menu">
+        <a href="../index.html">Home</a>
+        <a href="start.html">Start</a>
+        <a href="reset.html" onclick="resetState()">Reset</a>
+      </div>
+
+      <div id="status"></div>
+
+        <h1>Barely Made It</h1>
+        <h2>You arrived… but it cost you.</h2>
+
+      <div class="storyBlock">
+        <p id="barelyMsg"></p>
+        <p>You try to focus, but your mind keeps replaying every choice that got you here.</p>
+      </div>
+
+      <div class="choices">
+        <a href="reset.html" onclick="resetState()">Try Again (Reset)</a>
+        <a href="../index.html">Back to Home</a>
+      </div>
+    </div>
+
+    <script>
+      renderStatusBar();
+      renderBarelyEndingMessage();
+    </script>
+  </body>
+</html>

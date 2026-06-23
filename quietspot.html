@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>The Lateness Quest - Quiet Spot</title>
+
+     <link rel="stylesheet" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css"/>
+
+    <script src="../js/state.js"></script>
+    <script src="../js/page.js"></script>
+  </head>
+
+  <body id="quietspot">
+    <div id="wrapper">
+
+      <div id="menu">
+        <a href="../index.html">Home</a>
+        <a href="start.html">Start</a>
+        <a href="reset.html" onclick="resetState()">Reset</a>
+      </div>
+
+      <div id="status"></div>
+      <h1>A Quiet Spot</h1>
+      <h2>Not more time. Just more clarity.</h2>
+
+      <div class="storyBlock">
+        <p>You find a small space away from the noise. The world doesn’t slow down, but you do.</p>
+        <p id="quietspotMsg"></p>
+      </div>
+
+      <div class="choices">
+        <a href="plan.html" onclick="(function(){var s=getState(); s.stress=clampStress(s.stress-2); setState(s);}())"> Re-plan with a clearer head (stress -2)</a>
+
+        <a href="leave.html" onclick="(function(){var s=getState(); s.stress=clampStress(s.stress-1); setState(s);}())"> Move forward (stress -1)</a>
+
+        <a href="barelyending.html" onclick="(function(){var s=getState(); s.stress=clampStress(s.stress-1); setState(s);}())">Commit and head to class</a>
+      </div>
+    </div>
+
+    <script>
+      renderStatusBar();
+      renderQuietSpotMessage();
+    </script>
+  </body>
+</html>
